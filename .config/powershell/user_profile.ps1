@@ -28,6 +28,18 @@ Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 
+# Git Aliases
+function Get-GitStatus () { git status }
+Set-Alias -Name gs -Value Get-GitStatus
+function Get-GitAdd { git add $args }
+Set-Alias -Name ga -Value Get-GitAdd
+function Get-GitCheckout { git checkout $args }
+Set-Alias -Name gco -Value Get-GitCheckout
+function Get-GitCheckoutDevelop { git checkout develop }
+Set-Alias -Name gcod -Value Get-GitCheckoutDevelop
+function Get-GitCheckoutMaster { git checkout master }
+Set-Alias -Name gcom -Value Get-GitCheckoutMaster
+
 # Utilities
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |

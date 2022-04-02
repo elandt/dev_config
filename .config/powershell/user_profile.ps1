@@ -3,7 +3,7 @@ Import-Module posh-git
 
 # Oh My Posh
 function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
-$PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'takuya.omp.json'
+$PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'takuya-modded.omp.json'
 oh-my-posh --init --shell pwsh --config $PROMPT_CONFIG | Invoke-Expression
 
 # Icons

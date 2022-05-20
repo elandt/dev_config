@@ -33,6 +33,5 @@ vim.opt.scrolloff = 8				                    -- Minimum number of lines above an
 vim.opt.sidescrolloff = 8			                  -- Minimum number of columns left/right of cursor
 
 vim.opt.shortmess:append "c"			              -- Add `c` to the list for the `shortmess` option
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"            -- Also umm?
-vim.cmd [[set iskeyword+=-]]                    -- Tells neovim to treat words joined by a dash ("-") as a single word, for example when using `dw`; should be the vim script equivalent of the :append used on `shortmess`
+vim.opt.whichwrap:append "<,>,[,]"              -- Appends a list of keys to the `whichwrap` option; Allow specified keys that move the cursor left/right to move to the previous/next line when the cursor is on the first/last character in	the line.
+vim.opt.iskeyword:append "-"                    -- Tells neovim to treat words joined by a dash ("-") as a single word, for example when using `dw`; should be the vim script equivalent of the :append used on `shortmess`

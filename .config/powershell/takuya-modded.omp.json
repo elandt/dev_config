@@ -94,6 +94,15 @@
           }
         },
         {
+          "type": "aws",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "foreground": "#ffffff",
+          "background": "#FFA400",
+          "template": " \uE7AD {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+        },
+        {
           "background": "#40c4ff",
           "foreground": "#ffffff",
           "invert_powerline": true,

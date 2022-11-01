@@ -39,6 +39,8 @@ function Get-GitCheckoutDevelop { git checkout develop }
 Set-Alias -Name gcod -Value Get-GitCheckoutDevelop
 function Get-GitCheckoutMaster { git checkout master }
 Set-Alias -Name gcom -Value Get-GitCheckoutMaster
+function Get-GitPushSetUpstream { git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD) }
+Set-alias -Name gpsu -Value Get-GitPushSetUpstream
 
 # Utilities
 function which ($command) {
